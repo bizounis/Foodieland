@@ -3,6 +3,7 @@ import post1 from '../public/Post1.png'
 import post2 from '../public/Post2.png'
 import post3 from '../public/Post3.png'
 import post4 from '../public/Post4.png'
+import FaInstagram from 'react-icons/fa'
 
 const InstagramLead = () => {
   return (
