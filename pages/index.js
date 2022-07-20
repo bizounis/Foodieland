@@ -16,7 +16,7 @@ export default function Home({ recipes }) {
     <Slider />
     <div className='fcontainer'>
       <IntroCategories />
-      <IntroRecipes recipelist={recipes}/>
+      <IntroRecipes recipelist={recipes} />
       <BlogLead />
       <InstagramLead />
       <RecommendedRecipes recipelist={recipes}/>
