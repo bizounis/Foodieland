@@ -13,7 +13,7 @@ const Sidebar = () => {
         <Image src={recipecover} className='rounded-3xl' />
         <div className=''>
           <a href='/' className='font-bold text-xl hover:underline leading-none'>Chicken Meatball with Creamy Cheese</a>
-          <h5>By Author</h5>
+          <h5 className='text-lg opacity-80 font-medium '>By Author</h5>
         </div>
       </div>
       <Image src={ad} />

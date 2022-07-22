@@ -7,7 +7,9 @@ export default function Blog() {
       <div className="border-2 border-yellow-500">
         <h1 className="text-center">Blog & Articles</h1>
         <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-        <div className="border-2 border-green-400">Search Box</div>
+        <div className="flex items-center justify-center border-2 border-black p-2">
+          search bar
+        </div>
         <div className='w-full h-screen flex'>
           <div className="w-3/4 border-2 border-purple-500">
             Blog

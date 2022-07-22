@@ -30,35 +30,35 @@ export default function Recipe ({ recipeDetails }) {
       {/* Recipe Header */}
       <div className='flex items-center justify-between'>
         <div className='space-y-6'>
-          <h2>Recipe {id}</h2>
+          <h1>Recipe {id}</h1>
           <div className='flex space-x-9 divide-x-2'>
             <div className='flex items-center space-x-4'>
               <Image src={avatar1} alt='user' />
               <div>
-                <h3>Name Surname</h3>
-                <p>Date Uploaded</p>
+                <h6 className='text-base font-bold'>Name Surname</h6>
+                <p className='text-sm'>Date Uploaded</p>
               </div>
             </div>
 
             <div className='flex items-center space-x-4 pl-5'>
               <RiTimerFill />
               <div>
-                <h4>Prep Time</h4>
-                <p>15 minutes</p>
+                <p className='text-base font-medium'>Prep Time</p>
+                <p className='text-sm'>15 minutes</p>
               </div>
             </div>
 
             <div className='flex items-center space-x-4 pl-5'>
               <RiTimerFill />
               <div>
-                <h4>Cooking Time</h4>
-                <p>15 minutes</p>
+                <p className='text-base font-medium'>Cooking Time</p>
+                <p className='text-sm'>15 minutes</p>
               </div>
             </div>
 
             <div className='flex items-center space-x-2 pl-5'>
               <ImSpoonKnife />
-              <h4>Chicken</h4>
+              <p className='text-base'>Chicken</p>
             </div>
           </div>
         </div>
@@ -84,23 +84,25 @@ export default function Recipe ({ recipeDetails }) {
         <div className='w-3/4 border-2 border-black object-fill'>
           <Image src={recipecover} className='object-cover' />
         </div>
-        <div className='w-1/4 p-6 rounded-[30px] bg-cyan-100 border-2 border-cyan-500 '>
-          <h3>Nutrition Information</h3>
-          <div className='flex items-center justify-between'>
-            <h4>Calories</h4>
-            <h4>219.9 kcal</h4>
-          </div>
-          <div className='flex items-center justify-between'>
-            <h4>Calories</h4>
-            <h4>219.9 kcal</h4>
-          </div>
-          <div className='flex items-center justify-between'>
-            <h4>Calories</h4>
-            <h4>219.9 kcal</h4>
-          </div>
-          <div className='flex items-center justify-between'>
-            <h4>Calories</h4>
-            <h4>219.9 kcal</h4>
+        <div className='w-1/4 p-6 rounded-[30px] bg-cyan-100 space-y-10'>
+          <h4 >Nutrition Information</h4>
+          <div className='space-y-4 divide-y-2 divide-gray-300'>    
+            <div className='flex items-center justify-between'>
+              <h6 className='opacity-60'>Calories</h6>
+              <h6>219.9 kcal</h6>
+            </div>
+            <div className='flex items-center justify-between pt-6'>
+              <h6 className='opacity-60'>Calories</h6>
+              <h6>219.9 kcal</h6>
+            </div>
+            <div className='flex items-center justify-between pt-6'>
+              <h6 className='opacity-60'>Calories</h6>
+              <h6>219.9 kcal</h6>
+            </div>
+            <div className='flex items-center justify-between pt-6'>
+              <h6 className='opacity-60'>Calories</h6>
+              <h6>219.9 kcal</h6>
+            </div>
           </div>
 
         </div>
