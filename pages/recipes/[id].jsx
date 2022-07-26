@@ -15,13 +15,15 @@ import Newsletter from '../../components/Newsletter'
 import RecommendedRecipes from '../../components/RecommendedRecipes'
 import Ingredient from './Ingredient'
 import RecipeDirection from './RecipeDirection'
+import RecipePreviewMain from '../../components/RecipePreviewMain'
 
-export default function Recipe ({ recipeDetails }) {
+export default function Recipe ({ recipeDetails, similarRecipes }) {
   
   const router = useRouter()
   const { id } = router.query
-  console.log(recipeDetails)
-  console.log(Object.keys(recipeDetails.nutrition).length)
+  console.log(similarRecipes)
+  // console.log(recipeDetails)
+  // console.log(Object.keys(recipeDetails.nutrition).length)
 
   const [checkIngredient, setCheckIngredient] = useState(false)
   const clickCheckIngr = () => setCheckIngredient(!checkIngredient)
@@ -161,7 +163,7 @@ export default function Recipe ({ recipeDetails }) {
                       getIng.name && (<h4>{getIng.name}</h4>)
                     }
                     {
-                      getIng.components.map((ingr) => <Ingredient text={ingr.raw_text} /> )
+                      getIng.components.map((ingr) => ingr.raw_text != 'n/a' ? <Ingredient text={ingr.raw_text} /> : '' )
                     }
                   </>
                 )
@@ -184,16 +186,34 @@ export default function Recipe ({ recipeDetails }) {
 
       <Newsletter />
 
+      <div className='flex flex-col border-2 border-amber-600'>
+        <h3 className='font-bold text-center'>You may also like these recipes</h3>
+        <div className="grid grid-cols-4 grid-rows-1 border-2 border-green-500" >
+          {
+            similarRecipes.map((smlr) => 
+              <RecipePreviewMain 
+              recTitle={smlr.name} 
+              recCover={smlr.thumbnail_url} 
+              recSlug={smlr.slug} 
+              recPrepTime={smlr.prep_time_minutes}
+              recID={smlr.id} 
+            />)
+          }
+        </div>
+      </div>
+
     </div>
   )
 }
 
 export async function getServerSideProps({ params: { id } }) {
   const data = await fetchApi(`${baseUrl}/recipes/get-more-info?id=${id}`)
+  const dataSim = await fetchApi(`${baseUrl}/recipes/list-similarities?limit=2&recipe_id=${id}`)
 
   return{
     props: {
-      recipeDetails : data
+      recipeDetails : data,
+      similarRecipes: dataSim.results.slice(0,4),
     }
   }
 }

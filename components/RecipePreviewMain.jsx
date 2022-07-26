@@ -7,10 +7,10 @@ import {ImSpoonKnife} from 'react-icons/im'
 
 const RecipePreviewMain = ({ recTitle, recCover, recSlug, recPrepTime, recID }) => {
   return (
-    <div className='m-auto p-6 mt-8 rounded-[16px]'>
+    <div className='m-auto p-6 mt-8 rounded-[16px] drop-shadow-lg'>
       <div className='relative overflow-hidden rounded-[16px]'>
         <a href={'/recipes/' + recID}>  
-          <img src={recCover} alt={recSlug} />
+          <img src={recCover} alt={recSlug}  />
         </a>
         <div className='absolute top-2 right-2 bg-gray-100 rounded-full p-3'>
           <FaHeart className='text-2xl text-gray-300 active:text-red-500'/>
