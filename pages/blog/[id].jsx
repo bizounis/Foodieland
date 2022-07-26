@@ -27,8 +27,8 @@ export default function Article() {
           </div>
         </div>
         <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum totam illum aliquid adipisci perferendis aperiam molestiae temporibus voluptatum nisi sunt!</p>
-        <div className="w-full border-2 border-sky-600 overflow-hidden object-fill rounded-[30px]">
-          <Image src={chef} />
+        <div className="w-full relative border-2 border-sky-600 overflow-hidden object-fill rounded-[30px]">
+        <Image src={chef} width={2400} height={1000} />
         </div>
         <div className="flex border-2 border-b-orange-600">
           <div className="w-4/5 px-20 py-10 border-2 border-red-600">

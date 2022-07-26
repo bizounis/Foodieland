@@ -16,7 +16,21 @@ const Sidebar = () => {
           <h5 className='text-lg opacity-80 font-medium '>By Author</h5>
         </div>
       </div>
-      <Image src={ad} />
+      <div className='flex space-x-4 items-center'>
+        <Image src={recipecover} className='rounded-3xl' />
+        <div className=''>
+          <a href='/' className='font-bold text-xl hover:underline leading-none'>Chicken Meatball with Creamy Cheese</a>
+          <h5 className='text-lg opacity-80 font-medium '>By Author</h5>
+        </div>
+      </div>
+      <div className='flex space-x-4 items-center'>
+        <Image src={recipecover} className='rounded-3xl' />
+        <div className=''>
+          <a href='/' className='font-bold text-xl hover:underline leading-none'>Chicken Meatball with Creamy Cheese</a>
+          <h5 className='text-lg opacity-80 font-medium '>By Author</h5>
+        </div>
+      </div>
+      <Image src={ad} className='mt-10'/>
     </div>
   )
 }

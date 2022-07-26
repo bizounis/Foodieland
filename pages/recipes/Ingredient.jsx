@@ -13,7 +13,7 @@ export default function Ingredient( { text }) {
         >
           <BsCheck className='text-xl'/>
         </a>
-        <h6 className={!checkIngredient ? 'line-through opacity-50 font-normal' : 'font-normal'}>{text}</h6>
+        <h6 className={!checkIngredient ? 'line-through opacity-50 font-normal capitalize' : 'font-normal capitalize'}>{text}</h6>
         
       </div>
       <div className='border border-gray-100 mt-4'></div>
